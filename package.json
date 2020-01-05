@@ -1,0 +1,40 @@
+{
+	"name": "passage",
+	"productName": "Passage",
+	"version": "0.1.0",
+	"description": "Life is a passage and so is time",
+	"main": ".webpack/main",
+	"scripts": {
+		"start": "tsc && electron dist/index.js",
+		"test": "tsc && ava"
+	},
+	"build": {
+		"appId": "com.passage.app"
+	},
+	"keywords": [],
+	"author": {
+		"name": "jdmartins",
+		"email": "joaodiogomartins@gmail.com"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^24.0.25",
+		"ava": "^2.4.0",
+		"electron": "7.1.7",
+		"electron-builder": "^21.2.0",
+		"eslint": "^6.8.0",
+		"jest-electron": "^0.1.11",
+		"ts-loader": "^6.2.1",
+		"ts-node": "^8.5.4",
+		"typescript": "^3.7.4"
+	},
+	"ava": {
+		"compileEnhancements": false,
+		"extensions": [
+			"ts"
+		],
+		"require": [
+			"ts-node/register"
+		]
+	}
+}
