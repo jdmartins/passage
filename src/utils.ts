@@ -13,3 +13,5 @@ export const toBase = (n: number, b: number): String => {
 			return n.toString(10);
 	}
 };
+
+export const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
