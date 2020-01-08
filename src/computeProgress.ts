@@ -1,10 +1,7 @@
+import { Range } from './store/types';
+
 type Timestamp = number;
 type Percentage = number;
-
-export interface Range<T> {
-	start: T;
-	end: T;
-}
 
 export enum RangeKind {
 	Day,
@@ -16,12 +13,6 @@ export enum RangeKind {
 
 const STD_END_TIME = [23, 59, 59];
 const STD_START_TIME = [0, 0, 0];
-
-const DAY_START_TIME = [0, 0, 0];
-
-const WORK_END_TIME = [16, 59, 59];
-const WORK_START_TIME = [9, 0, 0];
-const EVENING_START_TIME = [17, 0, 0];
 
 const getTimestamp = (
 	yyy?: number,
