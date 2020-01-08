@@ -1,15 +1,27 @@
 {
-	"name": "passage",
-	"productName": "Passage",
+	"name": "resolution",
+	"productName": "Resolution",
 	"version": "0.1.0",
 	"description": "Life is a passage and so is time",
 	"main": ".webpack/main",
 	"scripts": {
-		"start": "tsc && electron dist/index.js",
-		"test": "tsc && ava"
+		"build": "webpack --mode production",
+		"dev": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+		"start": "tsc && electron dist/main.js",
+		"server": "electron .",
+		"dist": "electron-builder",
+		"test": "ava"
 	},
 	"build": {
-		"appId": "com.passage.app"
+		"appId": "com.electron.${name}",
+		"files": [
+			"**/*",
+			"build"
+		],
+		"dmg": {
+			"title": "${productName}",
+			"icon": "icon.png"
+		}
 	},
 	"keywords": [],
 	"author": {
@@ -18,7 +30,9 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
+		"@types/electron-json-storage": "^4.0.0",
 		"@types/jest": "^24.0.25",
+		"@types/pouchdb-adapter-leveldb": "^6.1.3",
 		"ava": "^2.4.0",
 		"electron": "7.1.7",
 		"electron-builder": "^21.2.0",
@@ -26,7 +40,10 @@
 		"jest-electron": "^0.1.11",
 		"ts-loader": "^6.2.1",
 		"ts-node": "^8.5.4",
-		"typescript": "^3.7.4"
+		"typescript": "^3.7.4",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10",
+		"webpack-dev-server": "^3.10.1"
 	},
 	"ava": {
 		"compileEnhancements": false,
@@ -36,5 +53,8 @@
 		"require": [
 			"ts-node/register"
 		]
+	},
+	"dependencies": {
+		"electron-json-storage": "^4.1.8"
 	}
 }
