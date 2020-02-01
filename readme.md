@@ -1,4 +1,5 @@
 # Passage
+An electron app that keeps track of your time
 
 ### Be mindful of time
 
