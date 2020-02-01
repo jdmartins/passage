@@ -14,8 +14,8 @@ Inspired by [progressbarserver](https://progressbarserver.appspot.com/)
 - ✅ Change display mode to any progress metric
 - ❌ Remaining or elapsed timing
 - ❌ Lifespan progress
-- ❌ Settings menu
-- ❌ Persistent settings
+- ❌ preferences menu
+- ❌ Persistent preferences
 
 ### v1.1.0
 

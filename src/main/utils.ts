@@ -6,12 +6,12 @@
 export const toBase = (n: number, b: number): String => {
 	switch (b) {
 		case 2:
-			return (n >>> 0).toString(2);
+			return (n >>> 0).toString(2)
 		case 16:
-			return (n >>> 0).toString(16);
+			return (n >>> 0).toString(16)
 		default:
-			return n.toString(10);
+			return n.toString(10)
 	}
-};
+}
 
-export const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+export const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
